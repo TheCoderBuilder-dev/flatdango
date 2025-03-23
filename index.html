@@ -3,31 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flatadango</title>
+    <title>Flatadango - Movie Tickets</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>FLATADANGO</h1>
-        <p>BUY MOVIE TICKETS</p>
+        <h1>Flatadango</h1>
+        <p>Buy movie tickets for your favorite films!</p>
     </header>
+
     <main>
-        <div id="movies-container">
-            <h2>Movie Titles</h2>
-            <ul id="movie-list"></ul>
-        </div>
-        <div id="movie-details">
-            <img id="movie-poster" src="" alt="Movie Poster">
+        <section id="movies-container">
+            <h2>Available Movies</h2>
+            <ul id="movie-list"></ul> 
+        </section>
+
+        <section id="movie-details">
+            <img id="movie-poster" src="" alt="Movie poster">
             <div class="details">
-                <h2 id="movie-title">[MOVIE TITLE]</h2>
-                <p><span id="runtime">[RUNTIME]</span> minutes</p>
-                <p id="movie-description">[MOVIE DESCRIPTION]</p>
-                <p><strong>Showtime:</strong> <span id="showtime">[SHOWTIME]</span></p>
-                <p><strong>Tickets Left:</strong> <span id="tickets">[X]</span></p>
+                <h2 id="movie-title"></h2>
+                <p><strong>Runtime:</strong> <span id="runtime"></span> minutes</p>
+                <p id="movie-description"></p>
+                <p><strong>Showtime:</strong> <span id="showtime"></span></p>
+                <p><strong>Tickets Left:</strong> <span id="tickets"></span></p>
                 <button id="buy-ticket">Buy Ticket</button>
             </div>
-        </div>
+        </section>
     </main>
+
     <script src="script.js"></script>
 </body>
 </html>
