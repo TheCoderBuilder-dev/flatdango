@@ -3,12 +3,12 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function fetchMovies() {
-  fetch("http://localhost:3000/films")  // Fetch from the correct endpoint
+  fetch("http://localhost:3000/films")
       .then(res => res.json())
       .then(movies => {
           displayMovies(movies);
           if (movies.length > 0) {
-              showMovieDetails(movies[0]);  // Automatically load the first movie
+              showMovieDetails(movies[0]);
           }
       })
       .catch(err => console.error("Error fetching movies:", err));
@@ -16,7 +16,7 @@ function fetchMovies() {
 
 function displayMovies(movies) {
   const movieList = document.getElementById("movie-list");
-  movieList.innerHTML = ""; // Clear previous list
+  movieList.innerHTML = "";
   movies.forEach(movie => {
       const li = document.createElement("li");
       li.textContent = movie.title;
@@ -52,7 +52,6 @@ function buyTicket(movie) {
           document.getElementById("buy-ticket").disabled = true;
       }
 
-      // PATCH request to update backend
       fetch(`http://localhost:3000/films/${movie.id}`, {
           method: "PATCH",
           headers: {
